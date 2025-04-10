@@ -10,4 +10,4 @@
 
 ### Скриншои дашборда
 
-![grafana dash](https://github.com/wintercomesX/10-monitoring-03-grafana/blob/main/grafana1.PNG)
+![grafana dash](https://github.com/wintercomesX/10-monitoring-03-grafana/blob/main/grafana2.PNG)
