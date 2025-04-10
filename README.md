@@ -15,3 +15,7 @@
 ### Скриншот дашборда
 
 ![grafana dash](https://github.com/wintercomesX/10-monitoring-03-grafana/blob/main/grafana3.PNG) 
+
+## Задание 3
+
+![grafana dash](https://github.com/wintercomesX/10-monitoring-03-grafana/blob/main/grafana4.PNG) 
