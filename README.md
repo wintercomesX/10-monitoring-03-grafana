@@ -2,3 +2,12 @@
 ## Задание 1
 
 ![grafana dash](https://github.com/wintercomesX/10-monitoring-03-grafana/blob/main/grafana1.PNG)
+
+## Задание 2
+### Список запросов к prometheus
+
+
+
+### Скриншои дашборда
+
+![grafana dash](https://github.com/wintercomesX/10-monitoring-03-grafana/blob/main/grafana1.PNG)
