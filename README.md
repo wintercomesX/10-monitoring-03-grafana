@@ -19,3 +19,7 @@
 ## Задание 3
 
 ![grafana dash](https://github.com/wintercomesX/10-monitoring-03-grafana/blob/main/grafana4.PNG) 
+
+## Задание 4
+
+[Dashboard json](https://github.com/wintercomesX/10-monitoring-03-grafana/blob/main/dashboard.json)
