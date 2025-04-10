@@ -1,0 +1,183 @@
+{
+  "fieldConfig": {
+    "defaults": {
+      "custom": {},
+      "thresholds": {
+        "mode": "absolute",
+        "steps": []
+      },
+      "color": {}
+    },
+    "overrides": []
+  },
+  "gridPos": {
+    "h": 23,
+    "w": 24,
+    "x": 0,
+    "y": 0
+  },
+  "id": 2,
+  "options": {
+    "alertThreshold": true
+  },
+  "pluginVersion": "7.4.0",
+  "targets": [
+    {
+      "expr": "100 - avg(irate(node_cpu_seconds_total{mode=\"idle\"}[5m])) * 100",
+      "interval": "",
+      "legendFormat": "",
+      "refId": "A"
+    },
+    {
+      "expr": "node_load1",
+      "hide": false,
+      "interval": "",
+      "legendFormat": "",
+      "refId": "B"
+    },
+    {
+      "expr": "node_load5",
+      "hide": false,
+      "interval": "",
+      "legendFormat": "",
+      "refId": "C"
+    },
+    {
+      "expr": "node_load15",
+      "hide": false,
+      "interval": "",
+      "legendFormat": "",
+      "refId": "D"
+    },
+    {
+      "expr": "node_memory_MemAvailable_bytes / 1024 / 1024",
+      "hide": false,
+      "interval": "",
+      "legendFormat": "",
+      "refId": "E"
+    },
+    {
+      "expr": "(node_filesystem_size_bytes - node_filesystem_free_bytes) / node_filesystem_size_bytes * 100",
+      "hide": false,
+      "interval": "",
+      "legendFormat": "",
+      "refId": "F"
+    }
+  ],
+  "title": "Panel Title",
+  "type": "graph",
+  "renderer": "flot",
+  "yaxes": [
+    {
+      "label": null,
+      "show": true,
+      "logBase": 1,
+      "min": null,
+      "max": null,
+      "format": "short"
+    },
+    {
+      "label": null,
+      "show": true,
+      "logBase": 1,
+      "min": null,
+      "max": null,
+      "format": "short"
+    }
+  ],
+  "xaxis": {
+    "show": true,
+    "mode": "time",
+    "name": null,
+    "values": [],
+    "buckets": null
+  },
+  "yaxis": {
+    "align": false,
+    "alignLevel": null
+  },
+  "lines": true,
+  "fill": 1,
+  "linewidth": 1,
+  "dashLength": 10,
+  "spaceLength": 10,
+  "pointradius": 2,
+  "legend": {
+    "show": true,
+    "values": false,
+    "min": false,
+    "max": false,
+    "current": false,
+    "total": false,
+    "avg": false
+  },
+  "nullPointMode": "null",
+  "tooltip": {
+    "value_type": "individual",
+    "shared": true,
+    "sort": 0
+  },
+  "aliasColors": {},
+  "seriesOverrides": [],
+  "thresholds": [
+    {
+      "value": 3000,
+      "op": "gt",
+      "visible": true,
+      "fill": true,
+      "line": true,
+      "colorMode": "critical"
+    }
+  ],
+  "timeRegions": [],
+  "alert": {
+    "conditions": [
+      {
+        "type": "query",
+        "query": {
+          "params": [
+            "A",
+            "5m",
+            "now"
+          ]
+        },
+        "reducer": {
+          "type": "avg",
+          "params": []
+        },
+        "evaluator": {
+          "type": "gt",
+          "params": [
+            3000
+          ]
+        },
+        "operator": {
+          "type": "and"
+        }
+      }
+    ],
+    "noDataState": "no_data",
+    "executionErrorState": "alerting",
+    "frequency": "1m",
+    "handler": 1,
+    "notifications": [
+      {
+        "uid": "HQPlAb0Hz"
+      }
+    ],
+    "for": "5m",
+    "alertRuleTags": {},
+    "name": "Panel Title alert"
+  },
+  "fillGradient": 0,
+  "dashes": false,
+  "hiddenSeries": false,
+  "points": false,
+  "bars": false,
+  "stack": false,
+  "percentage": false,
+  "steppedLine": false,
+  "timeFrom": null,
+  "timeShift": null,
+  "datasource": null
+}
